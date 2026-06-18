@@ -43,7 +43,7 @@ If you find our work useful in your research, please consider citing:
 ```python  
 @article{
    title = {DGLNet: Dynamic Global–Local Context Aggregation for Lightweight Facial Expression Recognition},
-   url={https://github.com/hahappp/DCLNet},
+   url={https://github.com/hahappp/DGLNet},
    journal = {{The Visual Computer}}
 }
 ```
