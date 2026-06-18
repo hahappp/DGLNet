@@ -1,4 +1,4 @@
-# DGLNet: Multi-Scale Adaptive Context Aggregation for Lightweight Facial Expression Recognition
+# DGLNet: Dynamic Global–Local Context Aggregation for Lightweight Facial Expression Recognition
 
 Quick Start Environment setup for DGLNet 
 This code is directly related to the manuscript currently submitted to The Visual Computer
@@ -29,23 +29,21 @@ cd DGLNet
 pip install -r requirements.txt
 
 ### JAFFE Dataset
-
-bash Train/TrainDGLNet_JAFFE.sh
-
+https://zenodo.org/record/3451524.
 ### RAF-DB Dataset
 
-bash Train/TrainDGLNet_RAFDB.sh
+https://www.kaggle.com/datasets/msam-bare/fer2013.
 
 ### FER2013 Dataset
 
-bash Train/TrainDGLNet_FER2013.sh
+http://whdeng.cn/RAF/model1.html/data-set.
 
 ## Citations
 If you find our work useful in your research, please consider citing:
 ```python  
 @article{
-   title = {DGLNet: Multi-Scale Adaptive Context Aggregation for Lightweight Facial Expression Recognition},
-   url={[https://github.com/CYChe1/NLFER](https://github.com/hahappp/DCLNet)},
+   title = {DGLNet: Dynamic Global–Local Context Aggregation for Lightweight Facial Expression Recognition},
+   url={https://github.com/hahappp/DCLNet},
    journal = {{The Visual Computer}}
 }
 ```
