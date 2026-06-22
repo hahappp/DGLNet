@@ -33,6 +33,28 @@ https://www.kaggle.com/datasets/msam-bare/fer2013.
 
 http://whdeng.cn/RAF/model1.html/data-set.
 
+## Occlusion-RAF-DB and Pose-RAF-DB Protocols
+
+This project does not redistribute the RAF-DB images or any third-party dataset files. To reproduce the occlusion and pose robustness experiments, users should first obtain the original RAF-DB dataset from its official source and comply with its license and usage terms.
+
+The original authors provide the RAF-DB occlusion/pose subset lists and labels at:
+👉 [Challenge-condition-FER-dataset/RAF_DB_dir](https://github.com/kaiwang960112/Challenge-condition-FER-dataset/tree/master/RAF_DB_dir)
+
+Please download these list/label files from the original repository. Our code only reads externally obtained files and does not claim ownership of RAF-DB or the derived subset annotations.
+
+If you evaluate models using these protocols, please ensure you cite the corresponding paper:
+
+```bibtex
+@article{wang2020region,
+  title={Region attention networks for pose and occlusion robust facial expression recognition},
+  author={Wang, Kai and Peng, Xiaojiang and Yang, Jianfei and Meng, Debin and Qiao, Yu},
+  journal={IEEE Transactions on Image Processing},
+  volume={29},
+  pages={4057--4069},
+  year={2020},
+  publisher={IEEE}
+}
+
 ## Install dependencies
 
 cd DGLNet  
