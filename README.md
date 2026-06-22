@@ -48,6 +48,25 @@ pip install -r requirements.txt
 * **Drop Path Rate:** 0.2
 * **Data Augmentation:** RandAugment (`num_ops=2`, `magnitude=12`), Random Erasing (`p=0.5`), ColorJitter, and RandomRotation.
 * **Random Seed:** 42, 2026, 3407 (To ensure robustness and rule out coincidence, experiments were rigorously verified across multiple random seeds. The default seed in the provided scripts is 42.)
+
+## ⚡ Edge Deployment & ONNX Inference Demo
+
+To explicitly demonstrate the deployment potential of DGLNet on resource-constrained edge devices, we provide scripts to export the PyTorch model to the **ONNX** format and run a lightweight static image inference demo. This inference script is entirely independent of the PyTorch framework and relies solely on the lightweight `onnxruntime` engine.
+
+**1. Download ONNX Weights:**
+To keep the repository lightweight, the exported `.onnx` industrial deployment weights are hosted in the GitHub Releases. 
+* Please download `dglnet_rafdb.onnx` from the [Releases](#) page and place it in the root directory (or update the path in the script).
+
+**2. Export PyTorch Model to ONNX (Optional):**
+If you wish to export the model yourself, you can run the following script:
+```bash
+python Tools/export_onnx.py
+
+**3. Run Lightweight Inference Demo:**
+This script performs image preprocessing, feature extraction, and classification using only numpy and onnxruntime.
+# Before running, please ensure you modify the `test_image_path` in the script to point to a valid image.
+python Tools/onnx_image_infer.py
+
 ## Citations
 If you find our work useful in your research, please consider citing:
 ```python  
