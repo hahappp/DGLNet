@@ -62,10 +62,11 @@ If you wish to export the model yourself, you can run the following script:
 ```bash
 python Tools/export_onnx.py
 
-**3. Run Lightweight Inference Demo:**
+3. Run Lightweight Inference Demo:
 This script performs image preprocessing, feature extraction, and classification using only numpy and onnxruntime.
 # Before running, please ensure you modify the `test_image_path` in the script to point to a valid image.
 python Tools/onnx_image_infer.py
+
 
 ## Citations
 If you find our work useful in your research, please consider citing:
