@@ -1,12 +1,12 @@
 import torch
 import os
 # 导入你的 DGLNet 模型
-from model4 import convnext_tiny_ultimate
+from model import convnext_tiny_ultimate
 
 
 def main():
     # 1. 设置路径 (请根据你的实际情况修改)
-    weights_path = r"D:\code\light\weights\89.41-12-09_10-21-10_model4_RAF-DB_bs64_lr5e-05_best.pth"
+    weights_path = r"填写你的实际路径"
     output_onnx_path = r"dglnet_rafdb.onnx"
 
     # 2. 实例化模型并加载权重
