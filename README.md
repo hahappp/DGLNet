@@ -11,22 +11,17 @@ conda activate DGLNet
 
 ## Hardware:
 
-single RTX 5060 GPU
+NVIDIA RTX 5060 Ti GPU (16GB)
 
 ## Dataset
 
-Since JAFFE and RAF-DB and FER2013 are restricted by their respective licenses, please apply for and download the datasets from their official websites.
+Since the facial expression recognition datasets are restricted by their respective official licenses, we cannot distribute the images directly. Please apply for access and download them from their official repositories.
 
-**Please place the dataset as follows:**
+## Please place the dataset as follows:
 
 Dataset/JAFFE/
 Dataset/RAF-DB/
 Dataset/FER2013/
-
-## Install dependencies
-
-cd DGLNet  
-pip install -r requirements.txt
 
 ### JAFFE Dataset
 https://zenodo.org/record/3451524.
@@ -37,6 +32,22 @@ https://www.kaggle.com/datasets/msam-bare/fer2013.
 ### FER2013 Dataset
 
 http://whdeng.cn/RAF/model1.html/data-set.
+
+## Install dependencies
+
+cd DGLNet  
+pip install -r requirements.txt
+
+# To ensure full reproducibility, we explicitly list the core hyper-parameters and configurations used for training DGLNet on the dataset, which align exactly with the settings reported in our manuscript:
+## Optimizer: AdamW (`lr=5e-5`, `weight_decay=0.05`)
+## Learning Rate Scheduler: Cosine Annealing (`min_lr=1e-6`, `warmup_epochs=10`)
+## Loss Function: CrossEntropy (with `label_smoothing=0.1`) 
+## Training Epochs: 120 epochs 
+## Batch Size: 64
+## Gradient Clipping: `max_norm=1.0`
+## Drop Path Rate: 0.2
+## Data Augmentation: RandAugment (`num_ops=2`, `magnitude=12`), Random Erasing (`p=0.5`), ColorJitter, and RandomRotation.
+## Random Seed: 42, 2026, 3407 (To ensure robustness and rule out coincidence, experiments were rigorously verified across multiple random seeds. The default seed in the provided scripts is 42.)
 
 ## Citations
 If you find our work useful in your research, please consider citing:
