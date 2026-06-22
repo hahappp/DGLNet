@@ -72,7 +72,7 @@ pip install -r requirements.txt
 * **Data Augmentation:** RandAugment (`num_ops=2`, `magnitude=12`), Random Erasing (`p=0.5`), ColorJitter, and RandomRotation.
 * **Random Seed:** 42, 2026, 3407 (To ensure robustness and rule out coincidence, experiments were rigorously verified across multiple random seeds. The default seed in the provided scripts is 42.)
 
-## ⚡ Edge Deployment & ONNX Inference Demo
+## Edge Deployment & ONNX Inference Demo
 
 To explicitly demonstrate the deployment potential of DGLNet on resource-constrained edge devices, we provide scripts to export the PyTorch model to the **ONNX** format and run a lightweight static image inference demo. This inference script is entirely independent of the PyTorch framework and relies solely on the lightweight `onnxruntime` engine.
 
