@@ -57,14 +57,10 @@ To explicitly demonstrate the deployment potential of DGLNet on resource-constra
 To keep the repository lightweight, the exported `.onnx` industrial deployment weights are hosted in the GitHub Releases. 
 * Please download `dglnet_rafdb.onnx` from the [Releases](#) page and place it in the root directory (or update the path in the script).
 
-**2. Export PyTorch Model to ONNX (Optional):**
-If you wish to export the model yourself, you can run the following script:
+**2. Export PyTorch Model to ONNX (Optional) and Run Lightweight Inference Demo:**
+This script performs image preprocessing, feature extraction, and classification using only numpy and onnxruntime.If you wish to export the model yourself, you can run the following script:
 ```bash
 python Tools/export_onnx.py
-
-# 3. Run Lightweight Inference Demo:
-This script performs image preprocessing, feature extraction, and classification using only numpy and onnxruntime.
-# Before running, please ensure you modify the `test_image_path` in the script to point to a valid image.
 python Tools/onnx_image_infer.py
 
 
