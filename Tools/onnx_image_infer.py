@@ -37,7 +37,7 @@ def main():
     # 1. 刚才导出的 ONNX 模型路径
     onnx_model_path = "dglnet_rafdb.onnx"
     # 2. 随便找一张测试集里的图片路径
-    test_image_path = r"D:\dataset\RAF-DB\val\happy\test_0275.jpg"
+    test_image_path = r"填写图片路径"
     # ============================================
 
     class_names = ["Anger", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise"]
