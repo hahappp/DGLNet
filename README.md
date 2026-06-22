@@ -54,6 +54,7 @@ If you evaluate models using these protocols, please ensure you cite the corresp
   year={2020},
   publisher={IEEE}
 }
+```
 
 ## Install dependencies
 
@@ -84,7 +85,7 @@ This script performs image preprocessing, feature extraction, and classification
 ```bash
 python Tools/export_onnx.py
 python Tools/onnx_image_infer.py
-
+```
 
 ## Citations
 If you find our work useful in your research, please consider citing:
