@@ -25,13 +25,12 @@ Dataset/FER2013/
 
 ### JAFFE Dataset
 https://zenodo.org/record/3451524.
-### RAF-DB Dataset
 
-https://www.kaggle.com/datasets/msam-bare/fer2013.
+### RAF-DB Dataset
+http://whdeng.cn/RAF/model1.html/data-set.
 
 ### FER2013 Dataset
-
-http://whdeng.cn/RAF/model1.html/data-set.
+https://www.kaggle.com/datasets/msam-bare/fer2013.
 
 ## Occlusion-RAF-DB and Pose-RAF-DB Protocols
 
