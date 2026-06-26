@@ -55,10 +55,32 @@ If you evaluate models using these protocols, please ensure you cite the corresp
 }
 ```
 
-## Install dependencies
+## Quick Start
 
-cd DGLNet  
+### 1. Install dependencies
+
+```bash
+cd DGLNet
 pip install -r requirements.txt
+```
+### 2. Prepare datasets
+Please download the datasets from their official sources and organize them as follows:
+Dataset/
+├── RAF-DB/
+│   ├── train/
+│   └── val/
+├── FER2013/
+│   ├── train/
+│   └── val/
+└── JAFFE/
+    ├── train/
+    └── val/
+Due to dataset license restrictions, we do not redistribute the original images.
+
+### 3. Train DGLNet on RAF-DB
+```bash
+python Train/train_RAF.py --train-path Dataset/RAF-DB/train --val-path Dataset/RAF-DB/val --batch-size 64 --epochs 120 --lr 5e-5
+```
 
 # To ensure full reproducibility, we explicitly list the core hyper-parameters and configurations used for training DGLNet on the dataset, which align exactly with the settings reported in our manuscript:
 * **Optimizer:** AdamW (`lr=5e-5`, `weight_decay=0.05`)
