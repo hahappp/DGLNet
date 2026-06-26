@@ -64,7 +64,10 @@ cd DGLNet
 pip install -r requirements.txt
 ```
 ### 2. Prepare datasets
+
 Please download the datasets from their official sources and organize them as follows:
+
+```text
 Dataset/
 ├── RAF-DB/
 │   ├── train/
@@ -75,6 +78,8 @@ Dataset/
 └── JAFFE/
     ├── train/
     └── val/
+```
+
 Due to dataset license restrictions, we do not redistribute the original images.
 
 ### 3. Train DGLNet on RAF-DB
