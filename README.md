@@ -3,6 +3,8 @@
 Quick Start Environment setup for DGLNet 
 This code is directly related to the manuscript currently submitted to The Visual Computer
 
+## Model Summary
+
 ## Environment
 
 Python 3.8 + Torch 2.0.0 + CUDA 11.8  
