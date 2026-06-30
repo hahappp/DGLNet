@@ -1,6 +1,6 @@
 # Model/modules.py
 # Note: This is a skeleton version for the peer-review process.
-# The full implementation of the core attention modules (DSK_Attention, FGCBlock, LDF)
+# The full implementation of the core attention modules (DSK_Attention, FGCBlock, LWF)
 # will be publicly released upon the acceptance of the paper.
 
 import torch
@@ -37,9 +37,9 @@ class FGCBlock(nn.Module):
         return x + self.dummy_conv(x)
 
 
-class LDF(nn.Module):
+class LWF(nn.Module):
     """
-    Light Dynamic Fusion (LDF) Head (Skeleton).
+    Light Dynamic Fusion (LWF) Head (Skeleton).
     Optimized for dynamic multi-scale representation alignment.
     Core parameter-driven weighted aggregation logic is hidden.
     """
