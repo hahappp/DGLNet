@@ -89,32 +89,6 @@ Due to dataset license restrictions, we do not redistribute the original images.
 python Train/train_RAF.py --train-path Dataset/RAF-DB/train --val-path Dataset/RAF-DB/val --batch-size 64 --epochs 120 --lr 5e-5
 ```
 
-# To ensure full reproducibility, we explicitly list the core hyper-parameters and configurations used for training DGLNet on the dataset, which align exactly with the settings reported in our manuscript:
-* **Optimizer:** AdamW (`lr=5e-5`, `weight_decay=0.05`)
-* **Learning Rate Scheduler:** Cosine Annealing (`min_lr=1e-6`, `warmup_epochs=10`)
-* **Loss Function:** CrossEntropy (with `label_smoothing=0.1`)
-* **Training Epochs:** 120 epochs
-* **Batch Size:** 64
-* **Gradient Clipping:** `max_norm=1.0`
-* **Drop Path Rate:** 0.2
-* **Data Augmentation:** RandAugment (`num_ops=2`, `magnitude=12`), Random Erasing (`p=0.5`), ColorJitter, and RandomRotation.
-* **Random Seed:** 42, 2026, 3407 (To ensure robustness and rule out coincidence, experiments were rigorously verified across multiple random seeds. The default seed in the provided scripts is 42.)
-
-## Edge Deployment & ONNX Inference Demo
-
-To explicitly demonstrate the deployment potential of DGLNet on resource-constrained edge devices, we provide scripts to export the PyTorch model to the **ONNX** format and run a lightweight static image inference demo. This inference script is entirely independent of the PyTorch framework and relies solely on the lightweight `onnxruntime` engine.
-
-**1. Download ONNX Weights:**
-To keep the repository lightweight, the exported `.onnx` industrial deployment weights are hosted in the GitHub Releases. 
-* Please download `dglnet_rafdb.onnx` from the [Releases](#) page and place it in the root directory (or update the path in the script).
-
-**2. Export PyTorch Model to ONNX (Optional) and Run Lightweight Inference Demo:**
-This script performs image preprocessing, feature extraction, and classification using only numpy and onnxruntime.If you wish to export the model yourself, you can run the following script:
-```bash
-python Tools/export_onnx.py
-python Tools/onnx_image_infer.py
-```
-
 ## Citations
 If you find our work useful in your research, please consider citing:
 ```python  
